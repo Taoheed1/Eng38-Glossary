@@ -1,1 +1,34 @@
 grep Glossary
+
+grep is a function used within UNIX shell to search for patterns within a file.
+
+grep is written within the terminal as:
+
+  grep [options] pattern [files]
+
+information for grep commands can be found using 'grep --help' in the terminal or command line.
+
+Options Description
+
+-c : This prints only a count of line that match a pattern
+-h : Display the matched lines, but do not display the filenames.
+-i : Ignores, case for matching
+-l : Displays list of filenames only.
+-n : Display the matched lines and their line numbers.
+-v : This prints out all the lines that do not match the pattern
+-e exp : Specifies expression with this option. Can use multiple times.
+-f file : Takes patterns from file, one per line.
+-E : Treats pattern as an extended regular expression (RE)
+-w : Match whole word
+-o : Print only the matched parts of a matching line, with each such part on a separate output
+
+grep operators:
+
+'^' or '$': Anchor characters at the beginning and end of the pattern are used to anchor the pattern to the start and end of a word respectively
+'.' : Wildcard character is used to match any character
+'\' : Escape character used to match any special character (e.g. '.', '^', '$') as a regular character by escaping them with a '\'
+'[]' : Specify a range of characters to be matched
+'[^range]' : A carat with square brackets at the beginning of a specified range will match all lines that do not contain the specified range.
+'*' : Repetition modifier. An asterisk after a character or group of characters is used to allow matching zero or more instances of the preceding pattern.
+      The asterisk or star tells the engine to attempt to match the preceding token zero or more times. The plus tells the engine to attempt to match the preceding token once or more
+'\<' or '>/' : Used to specify the return to be the start or ending of the word respectively
